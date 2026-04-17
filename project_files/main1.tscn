@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://cwodkar05qjcu"]
+[gd_scene format=3 uid="uid://d0jyt27xw18v2"]
 
-[ext_resource type="Script" uid="uid://ndk3ei57vey" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://ndk3ei57vey" path="res://main.gd" id="1_2lxre"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7dm0k"]
 size = Vector3(0.1, 0.1, 0.1)
@@ -9,7 +9,7 @@ size = Vector3(0.1, 0.1, 0.1)
 size = Vector3(0.1, 0.1, 0.1)
 
 [node name="Node3D" type="Node3D" unique_id=111933719]
-script = ExtResource("1_ig7tw")
+script = ExtResource("1_2lxre")
 
 [node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=169195281]
 
