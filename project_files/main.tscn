@@ -1,35 +1,35 @@
-[gd_scene format=3 uid="uid://cwodkar05qjcu"]
+[gd_scene format=3 uid="uid://dlrmcd25maal2"]
 
-[ext_resource type="Script" uid="uid://ndk3ei57vey" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Script" path="res://main_node_script.gd" id="1_ig7tw"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_7dm0k"]
+[sub_resource type="BoxMesh" id="BoxMesh_0xm2m"]
 size = Vector3(0.1, 0.1, 0.1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
+[sub_resource type="BoxMesh" id="BoxMesh_h2yge"]
 size = Vector3(0.1, 0.1, 0.1)
 
-[node name="Node3D" type="Node3D" unique_id=111933719]
+[node name="main" type="Node3D" unique_id=2002043674]
 script = ExtResource("1_ig7tw")
 
-[node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=169195281]
+[node name="XROrigin3D" type="XROrigin3D" parent="." unique_id=584379357]
 
-[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=1835046568]
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" unique_id=890984724]
 
-[node name="XRController3D" type="XRController3D" parent="XROrigin3D" unique_id=472395262]
+[node name="LeftController" type="XRController3D" parent="XROrigin3D" unique_id=583370357]
 tracker = &"left_hand"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/XRController3D" unique_id=731757330]
-mesh = SubResource("BoxMesh_7dm0k")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/LeftController" unique_id=424396635]
+mesh = SubResource("BoxMesh_0xm2m")
 
-[node name="XRController3D2" type="XRController3D" parent="XROrigin3D" unique_id=790308269]
+[node name="RightController" type="XRController3D" parent="XROrigin3D" unique_id=627164972]
 tracker = &"right_hand"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/XRController3D2" unique_id=6896299]
-mesh = SubResource("BoxMesh_ig7tw")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="XROrigin3D/RightController" unique_id=347978050]
+mesh = SubResource("BoxMesh_h2yge")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=963613757]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=996263559]
 
-[node name="Button" type="Button" parent="CanvasLayer" unique_id=1415012190]
-offset_right = 309.0
-offset_bottom = 128.0
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=966476797]
+offset_right = 570.0
+offset_bottom = 299.0
 text = "Enter VR"
