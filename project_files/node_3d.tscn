@@ -48,18 +48,16 @@ background_energy_multiplier = 0.66
 sky = SubResource("Sky_jka67")
 ambient_light_sky_contribution = 0.1
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5arm"]
-albedo_color = Color(1, 1, 0, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jsk3o"]
+albedo_color = Color(1, 0, 1, 1)
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_wc5p8"]
-material = SubResource("StandardMaterial3D_i5arm")
-top_radius = 2.0
-bottom_radius = 1.0
-height = 10.0
+[sub_resource type="SphereMesh" id="SphereMesh_4arys"]
+material = SubResource("StandardMaterial3D_jsk3o")
+radius = 4.0
+height = 8.0
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_r3fl7"]
-height = 10.0
-radius = 1.0
+[sub_resource type="SphereShape3D" id="SphereShape3D_6iypd"]
+radius = 4.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_i5arm"]
 size = Vector3(2, 1, 5)
@@ -73,6 +71,16 @@ size = Vector3(2, 1, 5)
 [sub_resource type="BoxMesh" id="BoxMesh_wc5p8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4arys"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tereu"]
+albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cdqbm"]
+material = SubResource("StandardMaterial3D_tereu")
+height = 5.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_imku0"]
+height = 5.0
 
 [node name="main" type="Node3D" unique_id=1608127333]
 script = ExtResource("1_a202f")
@@ -146,15 +154,14 @@ shadow_normal_bias = 2.693
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Level" unique_id=1702281904]
 environment = SubResource("Environment_i5arm")
 
-[node name="slupek duuuzy" type="MeshInstance3D" parent="Level" unique_id=1326337335]
+[node name="kula" type="MeshInstance3D" parent="Level" unique_id=1326337335]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.394756, 5.014332, -8.158713)
-mesh = SubResource("CylinderMesh_wc5p8")
+mesh = SubResource("SphereMesh_4arys")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Level/slupek duuuzy" unique_id=65662864]
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/kula" unique_id=65662864]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/slupek duuuzy/StaticBody3D" unique_id=1790208528]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.72029734, 0)
-shape = SubResource("CylinderShape3D_r3fl7")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/kula/StaticBody3D" unique_id=1790208528]
+shape = SubResource("SphereShape3D_6iypd")
 
 [node name="pudelko_dlugie" type="MeshInstance3D" parent="Level" unique_id=241874667]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9346795, 0.48743773, 5.275026)
@@ -175,3 +182,12 @@ mesh = SubResource("BoxMesh_wc5p8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level/pudelko/StaticBody3D" unique_id=507280449]
 shape = SubResource("BoxShape3D_4arys")
+
+[node name="trojkat" type="MeshInstance3D" parent="Level" unique_id=1680700348]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+mesh = SubResource("CylinderMesh_cdqbm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level/trojkat" unique_id=122318037]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/trojkat/StaticBody3D" unique_id=50325846]
+shape = SubResource("CylinderShape3D_imku0")
