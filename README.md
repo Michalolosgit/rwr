@@ -75,7 +75,7 @@ Scena zawiera podłoże z kolizją oraz kilka obiektów o różnych gabarytach, 
 Projekt można uruchomić przez GitHub Pages:
 
 ```text
-m
+https://michalolosgit.github.io/rwr/
 ```
 
 ## Cel projektu
