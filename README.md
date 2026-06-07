@@ -98,4 +98,5 @@ Podczas realizacji projektu rozwinąłem umiejętności związane z:
 ## Autor
 
 Michał Wierzbicki
+
 Student kierunku Elektronika i Telekomunikacja
